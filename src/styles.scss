@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+.text-justify {
+    text-align: justify;
+}
+
+.mil-input-frame .mil-accent {
+    font-size: 13px;
+}
+
+.mil-button.mil-border:hover {
+    background: #f57c00 !important;
+    color: #fff !important;
+}
+
+.c-logo {
+    font-family: "sanctum", sans-serif;
+    font-size: 24px;
+    margin-top: 10px;
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: 1px;
+    &.dark {
+        color: #000 !important;
+        -webkit-text-stroke-color: #000;
+    }
+    &.light {
+        color: #fff !important;
+        -webkit-text-stroke-color: #fff;
+    }
+}
