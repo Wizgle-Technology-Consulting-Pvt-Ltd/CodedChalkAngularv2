@@ -12,7 +12,7 @@ export class CourseDetailsV1Component  implements OnInit {
   constructor(private courseService: CourseService) {}
 
   ngOnInit() {
-    this.courseDetails = this.courseService.getCourseByID('002');
+    this.courseDetails = this.courseService.getCourseByID('001');
     console.log(this.courseDetails);
   }
 
