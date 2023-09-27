@@ -8,30 +8,29 @@
 <!-- blog -->
 <section class="mil-blog mil-p-120-0">
     <div class="container">
-        <div class="row justify-content-between">
+        <div class="row justify-content-between" >
             <div class="col-lg-8 col-xl-8 mil-mb-120">
 
-                <span class="mil-suptitle mil-accent mil-mb-30">Website Speed</span>
-                <h3 class="mil-up-font mil-mb-30">17 Powerful Ways to Speed Up Your WooCommerce Store (2022 Ultimate Guide)</h3>
+                <span class="mil-suptitle mil-accent mil-mb-30">{{blogDetails?.overview?.bCategory}}</span>
+                <h3 class="mil-up-font mil-mb-30">{{blogDetails?.overview?.bTitle}}</h3>
                 <ul class="mil-dot-list mil-post-info mil-text-sm mil-mb-60">
-                    <li class="mil-post-author"><img src="../../../assets/img/faces/3.jpg" alt="Author"><span>Salman Ravoof</span></li>
-                    <li>29 Oct. 2023</li>
-                    <li>11 min read</li>
+                    <li class="mil-post-author"><img [src]="blogDetails?.overview?.image" alt="Author"><span>{{blogDetails?.overview?.author}}</span></li>
+                    <li>{{blogDetails?.overview?.date}}</li>
+                    <li>{{blogDetails?.overview?.readTime}}</li>
                 </ul>
                 <div class="mil-divider mil-mb-60"></div>
 
-                <p class="mil-mb-30">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable ..</p>
+                <p class="mil-mb-30">{{blogDetails?.overview?.bDescription}}</p>
 
-                <p class="mil-mb-60">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+                <!-- <p class="mil-mb-60">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
                     'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                    in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                    in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p> -->
+<div *ngFor="let data of blogDetails.sections">
+                <h3 class="mil-mb-50">{{data?.title}}</h3>
 
-                <h3 class="mil-mb-50">The Latest Technology</h3>
+                <p class="mil-mb-30" *ngFor="let p of data.details">{{p}}</p>
 
-                <p class="mil-mb-30">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage
-                    of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-
-                <p class="mil-mb-60">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence
+                <!-- <p class="mil-mb-60">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence
                     structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
 
 
@@ -41,9 +40,9 @@
                 <h3 class="mil-mb-50">Conclusion</h3>
 
                 <p class="mil-mb-60">Aliquam mollis, lorem ut elementum sagittis, ligula nulla ornare lorem, in pulvinar nulla turpis ac massa. Fusce imperdiet ullamcorper lacus non condimentum. Etiam ante magna, posuere sit amet quam id, ultricies cursus nisl. Vivamus maximus
-                    lorem in augue vulputate accumsan vel sed erat. Nullam quis sapien fermentum, sagittis est vel, commodo lectus.</p>
+                    lorem in augue vulputate accumsan vel sed erat. Nullam quis sapien fermentum, sagittis est vel, commodo lectus.</p> -->
 
-
+                  </div>
                 <div class="mil-divider mil-mb-60"></div>
 
 
@@ -51,13 +50,9 @@
             <div class="col-lg-4 col-xl-3 mil-mb-120">
                 <div class="mil-divider mil-mb-60"></div>
                 <div class="mil-mb-60">
-                    <h5 class="mil-list-title mil-mb-30">Tags</h5>
+                    <h5 class="mil-list-title mil-mb-30" >Tags</h5>
                     <ul class="mil-tags">
-                        <li><a href="#.">Business</a></li>
-                        <li><a href="#.">Design</a></li>
-                        <li><a href="#.">General</a></li>
-                        <li><a href="#.">Development</a></li>
-                        <li><a href="#.">Learning</a></li>
+                        <li *ngFor="let item of blogDetails.tags"><a href="#.">{{item.name}}</a></li>
                     </ul>
                 </div>
 
