@@ -9,6 +9,9 @@ import { CourseDetailsV1Component } from './pages/courses/course-details-v1/cour
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { BlogsComponent } from './pages/blog/blogs/blogs.component';
 import { BlogDetailsV1Component } from './pages/blog/blog-details-v1/blog-details-v1.component';
+import { CaseStudiesDetailsComponent } from './pages/case-studies/case-studies-details/case-studies-details.component';
+import { CaseStudiesV1Component } from './pages/case-studies/case-studies-v1/case-studies-v1.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { BlogDetailsV1Component } from './pages/blog/blog-details-v1/blog-detail
     CourseDetailsV1Component,
     HomePageComponent,
     BlogsComponent,
-    BlogDetailsV1Component
+    BlogDetailsV1Component,
+    CaseStudiesDetailsComponent,
+    CaseStudiesV1Component,
   ],
   imports: [
     BrowserModule,
