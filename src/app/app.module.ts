@@ -13,6 +13,8 @@ import { BlogsComponent } from './pages/blog/blogs/blogs.component';
 import { BlogDetailsV1Component } from './pages/blog/blog-details-v1/blog-details-v1.component';
 import { CaseStudiesDetailsComponent } from './pages/case-studies/case-studies-details/case-studies-details.component';
 import { CaseStudiesV1Component } from './pages/case-studies/case-studies-v1/case-studies-v1.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ResponseV1Component } from './pages/responses/response-v1/response-v1.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { CaseStudiesV1Component } from './pages/case-studies/case-studies-v1/cas
     BlogDetailsV1Component,
     CaseStudiesDetailsComponent,
     CaseStudiesV1Component,
+    ContactComponent,
+    ResponseV1Component,
   ],
   imports: [
     BrowserModule,

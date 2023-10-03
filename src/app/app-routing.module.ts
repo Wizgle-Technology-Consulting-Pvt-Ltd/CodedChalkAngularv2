@@ -7,14 +7,19 @@ import { BlogDetailsV1Component } from './pages/blog/blog-details-v1/blog-detail
 import { BlogsComponent } from './pages/blog/blogs/blogs.component';
 import { CaseStudiesDetailsComponent } from './pages/case-studies/case-studies-details/case-studies-details.component';
 import { CaseStudiesV1Component } from './pages/case-studies/case-studies-v1/case-studies-v1.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
+  {path: '', component:HomePageComponent},
+  {path: 'home', component:HomePageComponent},
   {path: 'course-detail/:id', component:CourseDetailsV1Component},
   {path: 'courses', component:CoursesComponent},
   {path: 'blog-detail/:id', component:BlogDetailsV1Component},
   {path: 'blogs', component:BlogsComponent},
   {path: 'case-studies-detail/:id', component:CaseStudiesDetailsComponent},
   {path: 'case-studies-v1', component:CaseStudiesV1Component},
+  {path: 'contact', component:ContactComponent},
+
 ];
 
 @NgModule({
