@@ -8,6 +8,9 @@ import { CoursesComponent } from './pages/courses/courses/courses.component';
 import { CourseDetailsV1Component } from './pages/courses/course-details-v1/course-details-v1.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { BlogsComponent } from './pages/blog/blogs/blogs.component';
+import { BlogDetailsV1Component } from './pages/blog/blog-details-v1/blog-details-v1.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     HeaderComponent,
     FooterComponent,
     CoursesComponent,
-    CourseDetailsV1Component
+    CourseDetailsV1Component,
+    HomePageComponent,
+    BlogsComponent,
+    BlogDetailsV1Component
   ],
   imports: [
     BrowserModule,

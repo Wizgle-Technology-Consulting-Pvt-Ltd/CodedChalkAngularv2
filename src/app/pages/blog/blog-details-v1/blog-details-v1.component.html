@@ -1,0 +1,68 @@
+<!-- banner -->
+<div class="mil-banner-sm-2 mil-deep-bg">
+    <img src="../../../assets/img/blog/5.jpg" class="mil-background-image" style="object-position: center" alt="Publication cover">
+    <div class="mil-overlay"></div>
+</div>
+<!-- banner end -->
+
+<!-- blog -->
+<section class="mil-blog mil-p-120-0">
+    <div class="container">
+        <div class="row justify-content-between" >
+            <div class="col-lg-8 col-xl-8 mil-mb-120">
+
+                <span class="mil-suptitle mil-accent mil-mb-30">{{blogDetails?.overview?.bCategory}}</span>
+                <h3 class="mil-up-font mil-mb-30">{{blogDetails?.overview?.bTitle}}</h3>
+                <ul class="mil-dot-list mil-post-info mil-text-sm mil-mb-60">
+                    <li class="mil-post-author"><img [src]="blogDetails?.overview?.image" alt="Author"><span>{{blogDetails?.overview?.author}}</span></li>
+                    <li>{{blogDetails?.overview?.date}}</li>
+                    <li>{{blogDetails?.overview?.readTime}}</li>
+                </ul>
+                <div class="mil-divider mil-mb-60"></div>
+
+                <p class="mil-mb-30">{{blogDetails?.overview?.bDescription}}</p>
+
+                <!-- <p class="mil-mb-60">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+                    'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                    in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p> -->
+<div *ngFor="let data of blogDetails.sections">
+                <h3 class="mil-mb-50">{{data?.title}}</h3>
+
+                <p class="mil-mb-30" *ngFor="let p of data.details">{{p}}</p>
+
+                <!-- <p class="mil-mb-60">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence
+                    structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+
+
+                <p class="mil-mb-60">Aliquam mollis, lorem ut elementum sagittis, ligula nulla ornare lorem, in pulvinar nulla turpis ac massa. Fusce imperdiet ullamcorper lacus non condimentum. Etiam ante magna, posuere sit amet quam id, ultricies cursus nisl. Vivamus maximus
+                    lorem in augue vulputate accumsan vel sed erat. Nullam quis sapien fermentum, sagittis est vel, commodo lectus.</p>
+
+                <h3 class="mil-mb-50">Conclusion</h3>
+
+                <p class="mil-mb-60">Aliquam mollis, lorem ut elementum sagittis, ligula nulla ornare lorem, in pulvinar nulla turpis ac massa. Fusce imperdiet ullamcorper lacus non condimentum. Etiam ante magna, posuere sit amet quam id, ultricies cursus nisl. Vivamus maximus
+                    lorem in augue vulputate accumsan vel sed erat. Nullam quis sapien fermentum, sagittis est vel, commodo lectus.</p> -->
+
+                  </div>
+                <div class="mil-divider mil-mb-60"></div>
+
+
+            </div>
+            <div class="col-lg-4 col-xl-3 mil-mb-120">
+                <div class="mil-divider mil-mb-60"></div>
+                <div class="mil-mb-60">
+                    <h5 class="mil-list-title mil-mb-30" >Tags</h5>
+                    <ul class="mil-tags">
+                        <li *ngFor="let item of blogDetails.tags"><a href="#.">{{item.name}}</a></li>
+                    </ul>
+                </div>
+
+                <div class="mil-divider mil-mb-60"></div>
+                <h5 class="mil-list-title mil-mb-30">Contact us</h5>
+                <p class="mil-mb-30">For any queries please email us at support@codedchalk.com</p>
+                <a href="" class="mil-link"><span>Contact</span><i class="fas fa-arrow-right"></i></a>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- blog end -->
