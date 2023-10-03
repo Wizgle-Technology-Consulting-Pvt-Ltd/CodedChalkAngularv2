@@ -18,75 +18,32 @@
 <section class="mil-blog mil-p-120-0">
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-lg-8 col-xl-8 mil-mb-120">
+            <div class="col-lg-8 col-xl-8 mil-mb-120" *ngFor="let blog of blogs">
 
-                <a href="publication.html" class="mil-card mil-mb-60">
+                <a class="mil-card mil-mb-60">
                     <div class="mil-cover-frame">
-                        <img src="../../../assets/img/blog/1.jpg" alt="project">
+                        <img [src]="blog.overview.image"  alt="project">
                     </div>
-                    <div class="mil-description">
+                    <div href="javascript:void(0);" class="mil-description" (click)="goToDetails(blog.id)">
                         <div class="mil-card-title">
                             <ul class="mil-dot-list mil-text-sm mil-mb-15">
-                                <li>Management</li>
-                                <li>29 Oct. 2023</li>
+                                <li>{{blog?.overview?.bCategory}} </li>
+                                <li>{{blog?.overview?.date}} </li>
                             </ul>
-                            <h4>Equal Opportunity</h4>
+                            <h4> {{blog?.overview?.bTitle}} </h4>
                         </div>
                         <div class="mil-card-text">
-                            <p>Equal Opportunity," as envisioned by CEO Anjali Waghmare at Codedchalk, is a commitment to creating an inclusive and level playing field for all individuals. It means that every person...</p>
+                            <p> {{blog?.overview?.bDescription}} </p>
                         </div>
                     </div>
                 </a>
-
-                <a href="publication.html" class="mil-card mil-mb-60">
-                    <div class="mil-cover-frame">
-                        <img src="../../../assets/img/blog/2.jpg" alt="project">
-                    </div>
-                    <div class="mil-description">
-                        <div class="mil-card-title">
-                            <ul class="mil-dot-list mil-text-sm mil-mb-15">
-                                <li>Management</li>
-                                <li>29 Oct. 2023</li>
-                            </ul>
-                            <h4>Easy & Most Powerful Server Platform.</h4>
-                        </div>
-                        <div class="mil-card-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor incididunt dolor sit amet, consectetur adipisicing.</p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="publication.html" class="mil-card mil-mb-60">
-                    <div class="mil-cover-frame">
-                        <img src="../../../assets/img/blog/3.jpg" alt="project">
-                    </div>
-                    <div class="mil-description">
-                        <div class="mil-card-title">
-                            <ul class="mil-dot-list mil-text-sm mil-mb-15">
-                                <li>Management</li>
-                                <li>29 Oct. 2023</li>
-                            </ul>
-                            <h4>Easy & Most Powerful Server Platform.</h4>
-                        </div>
-                        <div class="mil-card-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor incididunt dolor sit amet, consectetur adipisicing.</p>
-                        </div>
-                    </div>
-                </a>
-
-
-
             </div>
-            <div class="col-lg-4 col-xl-3 mil-mb-120">
+            <div class="col-lg-4 col-xl-3 mil-mb-120" *ngFor="let blog of blogs">
                 <div class="mil-divider mil-mb-60"></div>
                 <div class="mil-mb-60">
                     <h5 class="mil-list-title mil-mb-30">Tags</h5>
-                    <ul class="mil-tags">
-                        <li><a href="#.">Business</a></li>
-                        <li><a href="#.">Design</a></li>
-                        <li><a href="#.">General</a></li>
-                        <li><a href="#.">Development</a></li>
-                        <li><a href="#.">Learning</a></li>
+                    <ul class="mil-tags" >
+                        <li *ngFor="let item of blog.tags"><a href="#.">{{item.name}}</a></li>
                     </ul>
                 </div>
 
