@@ -20,33 +20,42 @@
 
                 </div>
                 <div class="col-xl-5 mil-relative">
-
-                    <form class="mil-event-form">
+          <div *ngIf="!hideForm">
+                    <form class="mil-event-form" novalidate (ngSubmit)="sendEmail()" [formGroup]="contactForm">
                         <h4 class="mil-mb-60 mil-text-center">Reserve Your Spot</h4>
 
                         <div class="mil-input-frame mil-dark-input mil-mb-30">
                             <label class="mil-h6 mil-dark"><span>First Name</span><span class="mil-accent">Required</span></label>
-                            <input type="text" placeholder="John">
-                        </div>
+                            <input type="text" formControlName="firstName" placeholder="John" required [ngClass]="{'is-invalid': submit && form['firstName'].errors}">
+                            <div *ngIf="form['firstName'].invalid && (form['firstName'].dirty || form['firstName'].touched)">
+                              <span class="mt-2 fs-sm error">Please Enter first name</span>
+                          </div>
+                          </div>
 
                         <div class="mil-input-frame mil-dark-input mil-mb-30">
                             <label class="mil-h6 mil-dark"><span>Last Name</span><span class="mil-accent">Required</span></label>
-                            <input type="text" placeholder="Doe">
+                            <input type="text" formControlName="lastName" placeholder="Doe" required [ngClass]="{'is-invalid': submit && form['lastName'].errors}">
+                            <div *ngIf="form['lastName'].invalid && (form['lastName'].dirty || form['lastName'].touched)">
+                              <span class="mt-2 fs-sm error">Please Enter last name</span>
+                          </div>
                         </div>
 
                         <div class="mil-input-frame mil-dark-input mil-mb-30">
                             <label class="mil-h6 mil-dark"><span>Company Name</span><span class="mil-dark-soft">Optional</span></label>
-                            <input type="text" placeholder="Agency Designs Inc.">
+                            <input type="text" formControlName="companyName" placeholder="Agency Designs Inc.">
                         </div>
 
                         <div class="mil-input-frame mil-dark-input mil-mb-30">
                             <label class="mil-h6 mil-dark"><span>Email Address</span><span class="mil-accent">Required</span></label>
-                            <input type="email" placeholder="email@mydomain.com">
+                            <input type="email" formControlName="email" placeholder="email@mydomain.com">
+                            <div *ngIf="form['email'].invalid && (form['email'].dirty || form['email'].touched)">
+                              <span class="mt-2 error fs-sm" *ngIf="form['email'].hasError('required')">Please Enter Email</span>
+                              <span class="mt-2 error fs-sm" *ngIf="form['email'].hasError('email')">Enter Valid Email Id</span>
+                          </div>
                         </div>
 
-
                         <div class="mil-checbox-frame mil-dark-input mil-mb-30">
-                            <input class="mil-checkbox" id="checkbox-1" type="checkbox" value="value">
+                            <input class="mil-checkbox" id="checkbox-1" type="checkbox" formControlName="checkbox" value="value" required>
                             <label for="checkbox-1" class="mil-text-sm">I agree to receive other communications from <span class="mil-accent">CodedChalk.</span></label>
                         </div>
 
@@ -55,9 +64,24 @@
                             by following the unsubscribe instructions provided in our messages or by contacting us directly. Thank you for choosing to stay informed and connected with CodedChalk!
                         </p>
 
-                        <a href="contact.html" class="mil-button mil-border mil-fw"><span>Submit Now</span></a>
-                    </form>
+                        <div class="mil-checbox-frame mil-dark-input mil-mb-30">
+                          <ngx-recaptcha2 formControlName="recaptcha" #captchaElem [siteKey] = "siteKey"></ngx-recaptcha2>
+                         </div> <br/>
 
+                        <button class="mil-button mil-border mil-fw" type="submit" [disabled]="contactForm.invalid">Submit Now</button>
+
+                        <!-- <a  href="javascript:void(0)" class="mil-button mil-border mil-fw" (click)="sendEmail()" ><span>Submit Now</span></a> -->
+                    </form>
+                  </div>
+                    <div class="mb-4">
+                      <div *ngIf="hideForm" class="card bg-success text-center p-3">
+                        <span><i class="fa-duotone fa-check-double mt-4 mb-3 text-light fs-lg"></i></span>
+                        <h6 class="h6 text-light mb-2">
+                            Thank you  for reaching out to us through our contact form!
+                        </h6>
+                        <p class="fs-sm text-light"> Our dedicated team of executives will promptly review your message and respond accordingly. Expect to hear from us soon. Should you have any further questions or require immediate assistance, please don't hesitate to contact us.</p>
+                    </div>
+                  </div>
                 </div>
             </div>
 

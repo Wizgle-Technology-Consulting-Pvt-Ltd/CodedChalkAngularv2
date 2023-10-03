@@ -9,9 +9,7 @@ import { CaseStudiesDetailsComponent } from './pages/case-studies/case-studies-d
 import { CaseStudiesV1Component } from './pages/case-studies/case-studies-v1/case-studies-v1.component';
 
 const routes: Routes = [
-  {path: '', component:HomePageComponent},
-  {path: 'home', component:HomePageComponent},
-  {path: 'course-detail', component:CourseDetailsV1Component},
+  {path: 'course-detail/:id', component:CourseDetailsV1Component},
   {path: 'courses', component:CoursesComponent},
   {path: 'blog-detail/:id', component:BlogDetailsV1Component},
   {path: 'blogs', component:BlogsComponent},

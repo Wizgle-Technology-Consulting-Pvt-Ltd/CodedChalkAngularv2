@@ -6,6 +6,8 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { CoursesComponent } from './pages/courses/courses/courses.component';
 import { CourseDetailsV1Component } from './pages/courses/course-details-v1/course-details-v1.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxCaptchaModule } from 'ngx-captcha';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { BlogsComponent } from './pages/blog/blogs/blogs.component';
 import { BlogDetailsV1Component } from './pages/blog/blog-details-v1/blog-details-v1.component';
@@ -29,6 +31,9 @@ import { CaseStudiesV1Component } from './pages/case-studies/case-studies-v1/cas
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxCaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

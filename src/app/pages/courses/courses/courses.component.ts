@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CourseService } from 'src/app/services/course.service';
 
 @Component({
@@ -7,21 +8,24 @@ import { CourseService } from 'src/app/services/course.service';
   styleUrls: ['./courses.component.scss']
 })
 export class CoursesComponent implements OnInit {
-  
+
   courses: any;
-  
-  constructor(private courseService: CourseService) {}
+
+  constructor(private courseService: CourseService,
+    private router: Router,
+    ) {}
 
   ngOnInit() {
-    debugger;
-
-    this.courseService.getCourseList().subscribe( 
+    this.courseService.getCourseList().subscribe(
       result => {
-          this.courses = result; 
+          this.courses = result;
           console.log(this.courses);
       }
    );
   }
-  
+  goToDetails(id: any){
+  this.router.navigate(['/course-detail/' +id])
+  }
+
 }
 
