@@ -1,14 +1,7 @@
 <!-- banner -->
-<!-- <div class="mil-banner-sm-2 mil-deep-bg">
-  <img src="../../../assets/img/blog/5.jpg" class="mil-background-image" style="object-position: center" alt="Publication cover">
-  <div class="mil-overlay"></div>
-</div> -->
-<!-- banner end -->
-
-   <!-- banner -->
-   <div class="mil-banner-sm mil-deep-bg">
-    <img src="../../../assets/img/deco/map.png" alt="background" class="mil-background-image">
-    <div class="mil-deco mil-deco-accent" style="top: 47%; right: 10%; transform: rotate(90deg)"></div>
+<div class="mil-banner-sm mil-deep-bg">
+    <img [src]="caseStudiesDetails.image" alt="background" class="mil-background-image">
+    <!-- <div class="mil-deco mil-deco-accent" style="top: 47%; right: 10%; transform: rotate(90deg)"></div> -->
     <div class="mil-banner-content">
         <div class="container mil-relative">
             <a href="javascript:void(0);" class="mil-link link-left mil-mb-30" routerLink="/cases"><i class="fas fa-arrow-left"></i><span>All Cases</span></a>
@@ -18,209 +11,106 @@
 </div>
 <!-- banner end -->
 
-<!-- blog -->
-<!-- <section class="mil-blog mil-p-120-0">
-  <div class="container">
-      <div class="row justify-content-between">
-          <div class="col-lg-8 col-xl-8 mil-mb-120">
+<!-- project -->
+<section class="mil-p-120-90">
+    <div class="container">
 
-              <h3 class="mil-up-font mil-mb-30">{{caseStudiesDetails?.overview?.bTitle}}</h3>
-              <ul class="mil-dot-list mil-post-info mil-text-sm mil-mb-60">
-                  <li class="mil-post-author"><img [src]="caseStudiesDetails?.overview?.image" alt="Image"></li>
-                  <li>{{caseStudiesDetails?.overview?.date}}</li>
-              </ul>
-              <div class="mil-divider mil-mb-60"></div>
+        <div class="row flex-sm-row-reverse justify-content-between">
+            <div class="col-lg-4 col-xl-3">
 
-              <p class="mil-mb-30">{{caseStudiesDetails?.overview?.bDescription}}</p> -->
+                <div class="mil-project-info mil-mb-60">
 
-              <!-- <p class="mil-mb-60">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
-                  'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                  in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p> -->
-                  <!-- <div *ngFor="let data of caseStudiesDetails.sections">
-              <h3 class="mil-mb-50">{{data?.title}}</h3>
+                    <h5 class="mil-list-title mil-mb-30">Project Info</h5>
 
-              <p class="mil-mb-30"  *ngFor="let p of data.details">{{p}}</p>
-        </div>
-              <div class="mil-divider mil-mb-60"></div>
+                    <p class="mil-mb-10">Client</p>
+                    <h6 class="mil-mb-15">{{caseStudiesDetails.projectInfo.client}}</h6>
+                    <div class="mil-divider mil-divider-left mil-mb-30"></div>
+                    <p class="mil-mb-10">Service</p>
+                    <h6 class="mil-mb-15">{{caseStudiesDetails.projectInfo.service}}</h6>
+                    <div class="mil-divider mil-divider-left mil-mb-30"></div>
+                    <p class="mil-mb-10">Industry</p>
+                    <h6 class="mil-mb-15">{{caseStudiesDetails.projectInfo.industry}}</h6>
+                    <div class="mil-divider mil-divider-left mil-mb-30"></div>
+                    <p class="mil-mb-10">Stack</p>
+                    <h6>{{caseStudiesDetails.projectInfo.stack}}</h6>
+
+                </div>
+
             </div>
-          <div class="col-lg-4 col-xl-3 mil-mb-120">
-              <div class="mil-divider mil-mb-60"></div>
-              <div class="mil-mb-60">
-                  <h5 class="mil-list-title mil-mb-30">Tags</h5>
-                  <ul class="mil-tags">
-                    <li *ngFor="let item of caseStudiesDetails.tags"><a href="#.">{{item.name}}</a></li>
-                  </ul>
-              </div>
-
-              <div class="mil-divider mil-mb-60"></div>
-              <h5 class="mil-list-title mil-mb-30">Contact us</h5>
-              <p class="mil-mb-30">For any queries please email us at support@codedchalk.com</p>
-              <a href="" class="mil-link"><span>Contact</span><i class="fas fa-arrow-right"></i></a>
-
-          </div>
-      </div>
-  </div>
-</section> -->
-<!-- blog end -->
- <!-- project -->
- <section class="mil-p-120-90">
-  <div class="container">
-
-      <div class="row flex-sm-row-reverse justify-content-between">
-          <div class="col-lg-4 col-xl-3" >
-
-              <div class="mil-project-info mil-mb-60">
-
-                  <h5 class="mil-list-title mil-mb-30">Project Info</h5>
-
-                  <p class="mil-mb-10">Client</p>
-                  <h6 class="mil-mb-15">{{caseStudiesDetails.projectInfo.client}}</h6>
-                  <div class="mil-divider mil-divider-left mil-mb-30"></div>
-                  <p class="mil-mb-10">Service</p>
-                  <h6 class="mil-mb-15">{{caseStudiesDetails.projectInfo.service}}</h6>
-                  <div class="mil-divider mil-divider-left mil-mb-30"></div>
-                  <p class="mil-mb-10">Industry</p>
-                  <h6 class="mil-mb-15">{{caseStudiesDetails.projectInfo.industry}}</h6>
-                  <div class="mil-divider mil-divider-left mil-mb-30"></div>
-                  <p class="mil-mb-10">Stack</p>
-                  <h6>{{caseStudiesDetails.projectInfo.stack}}</h6>
-
-              </div>
-
-          </div>
-          <div class="col-lg-7 col-xl-8">
-
-              <span class="mil-suptitle mil-suptitle-2 mil-mb-30">Overviews</span>
-              <div *ngFor="let item of caseStudiesDetails.overview">
-              <h3 class="mil-mb-30">{{item.title}}</h3>
-              <p *ngFor="let p of item.description" class="mil-mb-60">{{p}}</p>
-              <!-- <h3 class="mil-mb-30">Our Solution</h3>
-              <p class="mil-mb-60">There are many variations of passagetitles of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p> -->
-
-              <!-- <div class="row">
-                  <div class="col-xl-6">
-
-                      <ul class="mil-check-icon-list mil-mb-15">
-                          <li *ngFor="let data of item.keypoint ">
-                              <img src="img/icons/sm/12.svg" alt="icon">
-                              <span class="mil-dark">Quis suspendisse ultrices gravida.</span>
-                          </li>
-                          <li>
-                              <img src="img/icons/sm/12.svg" alt="icon">
-                              <span class="mil-dark">Consectetur adipiscing elit.</span>
-                          </li>
-                          <li>
-                              <img src="img/icons/sm/12.svg" alt="icon">
-                              <span class="mil-dark">Quis suspendisse ultrices gravida.</span>
-                          </li>
-                          <li>
-                              <img src="img/icons/sm/12.svg" alt="icon">
-                              <span class="mil-dark">Consectetur adipiscing elit.</span>
-                          </li>
-                      </ul>
-
-                  </div>
-                  <div class="col-xl-6 mil-mb-30">
-
-                      <ul class="mil-check-icon-list">
-                          <li *ngFor="let data of item.keypoint ">
-                              <img src="img/icons/sm/12.svg" alt="icon">
-                              <span class="mil-dark">Quis suspendisse ultrices gravida.</span>
-                          </li>
-                          <li>
-                              <img src="img/icons/sm/12.svg" alt="icon">
-                              <span class="mil-dark">Consectetur adipiscing elit.</span>
-                          </li>
-                          <li>
-                              <img src="img/icons/sm/12.svg" alt="icon">
-                              <span class="mil-dark">Quis suspendisse ultrices gravida.</span>
-                          </li>
-                      </ul>
-</div>
-                  </div> -->
-              </div>
-
-
-          </div>
-      </div>
-
-  </div>
+            <div class="col-lg-7 col-xl-8">
+                <span class="mil-suptitle mil-suptitle-2 mil-mb-30 ">Overview</span>
+                <div *ngFor="let item of caseStudiesDetails.overview">
+                    <h3 class="mil-mb-30 mil-mt-60">{{item.title}}</h3>
+                    <p *ngFor="let p of item.description" class="mil-mb-30">{{p}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-  <!-- project end -->
+<!-- project end -->
 
-  <div class="container">
+<div class="container">
     <div class="mil-divider"></div>
 </div>
-    <!-- project -->
-    <section class="mil-p-120-60">
-      <div class="container">
-          <!-- <div class="row justify-content-between align-items-center"  *ngFor="let data of caseStudiesDetails.solutions">
-              <div class="col-xl-5 mil-mb-60">
-                  <h3 class="mil-mb-30">{{data?.title}}</h3>
-                  <p class="mil-mb-30">{{data?.details}}</p>
-              </div>
-              <div class="col-xl-6 mil-mb-60">
-                <div class="mil-project-cover">
-                      <img  [src]="data?.image" alt="Project">
-                  </div>
-                </div>
-          </div> -->
-          <div class="row flex-sm-row-reverse justify-content-between align-items-center" *ngFor="let imp of caseStudiesDetails.impact" >
-            <div class="col-xl-5 mil-mb-60">
 
+<!-- project -->
+<section class="mil-p-120-60">
+    <div class="container">
+        <div class="row flex-sm-row-reverse justify-content-between align-items-center" *ngFor="let imp of caseStudiesDetails.impact">
+            <div class="col-xl-5 mil-mb-60">
                 <h3 class="mil-mb-30">{{imp.title}}</h3>
                 <p *ngFor="let p of imp.details" class="mil-mb-30">{{p}}</p>
-
             </div>
             <div class="col-xl-6 mil-mb-60">
-
                 <div class="mil-project-cover">
-                    <img  [src]="imp.image" alt="Project">
+                    <img [src]="imp.image" alt="Project">
                 </div>
-
             </div>
         </div>
-      </div>
-  </section>
-  <!-- project end -->
+    </div>
+</section>
+<!-- project end -->
 
-  <div class="container">
-      <div class="mil-divider"></div>
-  </div>
-      <!-- conclusion -->
-      <section class="mil-p-120-60">
-        <div class="mil-deco" style="top: 0; left: 30%;"></div>
-        <div class="container">
-            <div class="row align-items-end mil-mb-90">
-                <div class="col-xl-6">
+<div class="container">
+    <div class="mil-divider"></div>
+</div>
 
-                    <h2 class="mil-mb-30">{{caseStudiesDetails.conclusion.cTitle}}</h2>
-
-                    <p>{{caseStudiesDetails.conclusion.cDescription}}</p>
-
-                </div>
+<!-- conclusion -->
+<section class="mil-p-120-60">
+    <div class="mil-deco" style="top: 0; left: 30%;"></div>
+    <div class="container">
+        <div class="row align-items-end mil-mb-90">
+            <div class="col-xl-12">
+                <h2 class="mil-mb-30">{{caseStudiesDetails.conclusion.cTitle}}</h2>
+                <p>{{caseStudiesDetails.conclusion.cDescription}}</p>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col-md-6 col-xl-4" *ngFor="let item of caseStudiesDetails.additionalInfo">
-
-                    <div class="mil-icon-box-2 mil-mb-60">
-                        <div class="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
-                            <img [src]="item.icon" alt="icon">
-                        </div>
-                        <div class="mil-box-text">
-                            <h4 class="mil-mb-30"> {{item.eTitle}} </h4>
-                            <p class="mil-box-text mil-mb-30">{{item.eDescription}}</p>
-                        </div>
+        <!-- <div class="row">
+            <div class="col-md-6 col-xl-4" *ngFor="let item of caseStudiesDetails.additionalInfo">
+                <div class="mil-icon-box-2 mil-mb-60">
+                    <div class="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
+                        <img [src]="item.icon" alt="icon">
                     </div>
-
+                    <div class="mil-box-text">
+                        <h4 class="mil-mb-30"> {{item.eTitle}} </h4>
+                        <p class="mil-box-text mil-mb-30">{{item.eDescription}}</p>
+                    </div>
                 </div>
-
             </div>
-        </div>
-    </section>
-    <!-- conclusion end -->
+        </div> -->
+    </div>
+</section>
+<!-- conclusion end -->
 
+<section>
     <div class="container">
         <div class="mil-divider mil-mb-60"></div>
+
+        <div class="row align-items-center mil-mb-60">
+            <div class="col-lg-12">
+                <a routerLink="/contact" class="mil-link mil-mb-30"><span>Contact us for more details</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
     </div>
+</section>

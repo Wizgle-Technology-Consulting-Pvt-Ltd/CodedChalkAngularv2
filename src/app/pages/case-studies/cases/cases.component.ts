@@ -15,18 +15,27 @@ export class CasesComponent implements OnInit {
   caseStudies: any;
 
   constructor(private caseStudiesService: CaseStudiesService,
-    private router: Router) {}
+    private router: Router) { }
 
   ngOnInit() {
     this.caseStudiesService.getCaseStudiesList().subscribe(
       result => {
-          this.caseStudies = result;
-          console.log(this.caseStudies);
+        this.caseStudies = result;
+        console.log(this.caseStudies);
       }
-   );
+    );
   }
 
-  goToDetails(id: any){
-    this.router.navigate(['/case-detail/' +id])
+  goToDetails(id: any) {
+    this.router.navigate(['/case-detail/' + id])
+  }
+
+  checkOddEvent(i: any){
+    if(i % 2 ==0){
+      return true;
     }
+    else{
+      return 0;
+    }
+  }
 }

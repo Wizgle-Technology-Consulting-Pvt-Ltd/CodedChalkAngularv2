@@ -1,43 +1,51 @@
 <p>case-studies-v1 works!</p>
 <!-- banner -->
 <div class="mil-banner-sm mil-deep-bg">
-  <img src="../../../assets/img/deco/map.png" alt="background" class="mil-background-image">
-  <div class="mil-deco mil-deco-accent" style="top: 47%; right: 10%; transform: rotate(90deg)"></div>
-  <div class="mil-banner-content">
-      <div class="container mil-relative">
-          <ul class="mil-breadcrumbs mil-mb-30">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Case Studies</a></li>
-          </ul>
-          <h2 class="mil-uppercase">Case Studies</h2>
-      </div>
-  </div>
+    <img src="../../../assets/img/deco/map.png" alt="background" class="mil-background-image">
+    <div class="mil-deco mil-deco-accent" style="top: 47%; right: 10%; transform: rotate(90deg)"></div>
+    <div class="mil-banner-content">
+        <div class="container mil-relative">
+            <ul class="mil-breadcrumbs mil-mb-30">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Case Studies</a></li>
+            </ul>
+            <h2 class="mil-uppercase">Case Studies</h2>
+        </div>
+    </div>
 </div>
 <!-- banner end -->
 
-<!-- Case Study -->
-<section class="mil-blog mil-p-120-0">
-  <div class="container">
-      <div class="row justify-content-between">
-          <div class="col-lg-8 col-xl-8 mil-mb-120" *ngFor="let case of caseStudies">
-            <a class="mil-card mil-mb-60">
-                  <div class="mil-cover-frame">
-                      <img [src]="case.image" alt="image">
-                  </div>
-                  <div href="javascript:void(0);" class="mil-description" (click)="goToDetails(case.id)">
-                      <div class="mil-card-title">
-                          <ul class="mil-dot-list mil-text-sm mil-mb-15">
-                          </ul>
-                          <h4>{{case.heading}}</h4>
-                      </div>
-                  </div>
+<!-- portfolio -->
+<section class="mil-p-120-120">
+    <div class="container">
+        <div class="row justify-content-between align-items-center" *ngFor="let case of caseStudies; let i = index" [ngClass]="{'flex-sm-row-reverse': checkOddEvent(i) == true}">
+            <div class="col-xl-6 mil-mb-60">
+                <div class="mil-project-cover">
+                    <img [src]="case.image" alt="Project">
+                </div>
+            </div>
+            <div class="col-xl-5 mil-mb-60">
+                <span class="mil-suptitle mil-suptitle-2 mil-mb-30">{{case.projectInfo.industry}}</span>
+                <h3 class="mil-mb-30">{{case.heading}}</h3>
+                <a href="javascript:void(0)" class="mil-button-with-label" (click)="goToDetails(case.id)">
+                    <div class="mil-button mil-border mil-icon-button"><span><i class="fas fa-plus"></i></span></div><span class="mil-dark">See More</span>
                 </a>
-          </div>
-             <div class="mil-divider mil-mb-60"></div>
-              <h5 class="mil-list-title mil-mb-30">Contact us</h5>
-              <p class="mil-mb-30">For any queries please email us at support@codedchalk.com</p>
-              <a href="" class="mil-link"><span>Contact</span><i class="fas fa-arrow-right"></i></a>
-          </div>
-  </div>
+            </div>
+        </div>
+    </div>
+
+
 </section>
-<!-- blog end -->
+
+<section>
+    <div class="container">
+        <div class="mil-divider mil-mb-60"></div>
+
+        <div class="row align-items-center mil-mb-60">
+            <div class="col-lg-12">
+                <a routerLink="/contact" class="mil-link mil-mb-30"><span>Contact us for more details</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- portfolio end -->
