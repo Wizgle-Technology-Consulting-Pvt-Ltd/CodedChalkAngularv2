@@ -17,6 +17,7 @@ import { PrivacyPolicyComponent } from './pages/static-pages/privacy-policy/priv
 import { PartnersComponent } from './pages/static-pages/partners/partners.component';
 import { ServicesComponent } from './services/services/services.component';
 import { ServiceDetailsV1Component } from './services/service-details-v1/service-details-v1.component';
+import { JobApplicationFormComponent } from './pages/job-application-form/job-application-form.component';
 
 const routes: Routes = [
   {path: '', component:HomePageComponent},
@@ -37,6 +38,8 @@ const routes: Routes = [
   {path: 'partners', component:PartnersComponent},
   {path: 'services', component:ServicesComponent},
   {path: 'service-detail/:id', component:ServiceDetailsV1Component},
+  {path: 'job-application', component:JobApplicationFormComponent},
+
 
 
 

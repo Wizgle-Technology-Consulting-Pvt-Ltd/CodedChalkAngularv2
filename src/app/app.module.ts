@@ -24,6 +24,8 @@ import { PrivacyPolicyComponent } from './pages/static-pages/privacy-policy/priv
 import { PartnersComponent } from './pages/static-pages/partners/partners.component';
 import { ServicesComponent } from './services/services/services.component';
 import { ServiceDetailsV1Component } from './services/service-details-v1/service-details-v1.component';
+import { JobApplicationFormComponent } from './pages/job-application-form/job-application-form.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -48,14 +50,16 @@ import { ServiceDetailsV1Component } from './services/service-details-v1/service
     PrivacyPolicyComponent,
     PartnersComponent,
     ServicesComponent,
-    ServiceDetailsV1Component
+    ServiceDetailsV1Component,
+    JobApplicationFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxCaptchaModule
+    NgxCaptchaModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
