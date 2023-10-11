@@ -24,12 +24,11 @@ import { PrivacyPolicyComponent } from './pages/static-pages/privacy-policy/priv
 import { PartnersComponent } from './pages/static-pages/partners/partners.component';
 import { ServicesComponent } from './services/services/services.component';
 import { ServiceDetailsV1Component } from './services/service-details-v1/service-details-v1.component';
-import { CareerDetailComponent } from './pages/career-detail/career-detail.component';
 import { CareersComponent } from './pages/careers/careers.component';
 import { InsightDetailComponent } from './pages/insight/insight-detail/insight-detail.component';
 import { InsightComponent } from './pages/insight/insight/insight.component';
-
 import { SummerInternshipComponent } from './pages/summer-internship/summer-internship.component';
+import { CareerDetailComponent } from './pages/career-detail/career-detail.component';
 
 
 @NgModule({
@@ -58,7 +57,8 @@ import { SummerInternshipComponent } from './pages/summer-internship/summer-inte
     CareerDetailComponent,
     InsightDetailComponent,
     InsightComponent,
-    SummerInternshipComponent
+    SummerInternshipComponent,
+    CareerDetailComponent,
   ],
   imports: [
     BrowserModule,
