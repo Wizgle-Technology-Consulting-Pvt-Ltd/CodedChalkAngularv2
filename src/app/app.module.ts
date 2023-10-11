@@ -15,6 +15,8 @@ import { CaseStudiesDetailsComponent } from './pages/case-studies/case-studies-d
 import { CaseStudiesV1Component } from './pages/case-studies/case-studies-v1/case-studies-v1.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ResponseV1Component } from './pages/responses/response-v1/response-v1.component';
+import { CareersComponent } from './pages/careers/careers.component';
+import { CareerDetailComponent } from './pages/career-detail/career-detail.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { ResponseV1Component } from './pages/responses/response-v1/response-v1.c
     CaseStudiesV1Component,
     ContactComponent,
     ResponseV1Component,
+    CareersComponent,
+    CareerDetailComponent,
   ],
   imports: [
     BrowserModule,
