@@ -23,6 +23,9 @@ import { InsightDetailComponent } from './pages/insight/insight-detail/insight-d
 
 import { SummerInternshipComponent } from './pages/summer-internship/summer-internship.component';
 import { CareerDetailComponent } from './pages/career-detail/career-detail.component';
+import { CareersComponent } from './pages/careers/careers.component';
+import { InsightComponent } from './pages/insight/insight/insight.component';
+import { InsightDetailComponent } from './pages/insight/insight-detail/insight-detail.component';
 
 const routes: Routes = [
   {path: '', component:HomePageComponent},
@@ -48,7 +51,11 @@ const routes: Routes = [
   {path:'insight-detail/:id',component:InsightDetailComponent},
   {path: 'summer-internship', component:SummerInternshipComponent},
   {path: 'careers',component:CareersComponent},
+  {path:'careers', component: CareersComponent},
   {path: 'career-detail/:id',component:CareerDetailComponent},
+  {path:'insight',component:InsightComponent},
+  {path:'insight-detail/:id',component:InsightDetailComponent}
+
 
 ];
 

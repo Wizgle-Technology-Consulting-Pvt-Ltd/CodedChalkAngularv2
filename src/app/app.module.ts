@@ -29,6 +29,9 @@ import { InsightDetailComponent } from './pages/insight/insight-detail/insight-d
 import { InsightComponent } from './pages/insight/insight/insight.component';
 import { SummerInternshipComponent } from './pages/summer-internship/summer-internship.component';
 import { CareerDetailComponent } from './pages/career-detail/career-detail.component';
+import { CareersComponent } from './pages/careers/careers.component';
+import { InsightDetailComponent } from './pages/insight/insight-detail/insight-detail.component';
+import { InsightComponent } from './pages/insight/insight/insight.component';
 
 
 @NgModule({
@@ -59,6 +62,9 @@ import { CareerDetailComponent } from './pages/career-detail/career-detail.compo
     InsightComponent,
     SummerInternshipComponent,
     CareerDetailComponent,
+    InsightDetailComponent,
+    InsightComponent,
+
   ],
   imports: [
     BrowserModule,
