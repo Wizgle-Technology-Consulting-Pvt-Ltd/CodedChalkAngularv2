@@ -1,0 +1,36 @@
+
+<section class="mil-careers mil-p-120-90">
+    <div class="container">
+        <div class="row justify-content-between mil-mb-90">
+            <div class="col-xl-6">
+                <h3 class="mil-mb-30">Inspire and Get Inspired by <br><span class="mil-accent">Professional</span> Experts</h3>
+            </div>
+
+            <div class="col-xl-4">
+                <p>It uses a dictionary of over <span class="mil-accent">200 Latin words</span>, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+            </div>
+
+        </div>
+        <ul class="mil-vacancies-frame">
+                <li class="mil-vacancy" *ngFor="let opening of jobOpening">
+                  <div class="row" (click)="goToDetails(opening.id)">
+                    <div class="col-md-6 col-lg-4 col-xl-4 mil-mb-30">
+                      <div class="mil-vacancy-head mil-mb-15">
+                        <span class="mil-badge">Full Time</span>
+                        <span class="mil-text-sm mil-dark" >{{ opening?.designation }}</span>
+                      </div>
+                      <h4>{{ opening?.title }}</h4>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4 mil-mb-30">
+                      <p>{{ opening?.summary }}</p>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-xl-4 mil-mb-30">
+                      <div class="mil-adaptive-right">
+                        <a href="#" class="mil-button mil-border"><span>Apply Now</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+        </ul>
+    </div>
+</section>

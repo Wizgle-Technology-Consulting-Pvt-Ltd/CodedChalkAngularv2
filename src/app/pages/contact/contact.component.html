@@ -20,7 +20,7 @@
         <div class="row justify-content-between">
             <div class="col-lg-8 col-xl-8 mil-mb-120">
 
-                <form>
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
                     <h4 class="mil-mb-60"><span class="mil-accent">01.</span> Tell Us About Yourself</h4>
 
@@ -29,7 +29,10 @@
 
                             <div class="mil-input-frame mil-dark-input mil-mb-30">
                                 <label class="mil-h6 mil-dark"><span>First Name</span></label>
-                                <input type="text" placeholder="John">
+                                <input type="text"  id="firstname" formControlName="firstname" placeholder="John">
+                                <small class="form-text errorMsg" *ngIf="form.controls['firstname'].touched && form.controls['firstname'].errors?.['required']">
+                                    Enter your first name
+                                  </small>
                             </div>
 
                         </div>
@@ -37,7 +40,10 @@
 
                             <div class="mil-input-frame mil-dark-input mil-mb-30">
                                 <label class="mil-h6"><span>Last Name</span></label>
-                                <input type="text" placeholder="Jones">
+                                <input type="text" id="lastname" formControlName="lastname" placeholder="Janes">
+                                <small class="form-text errorMsg" *ngIf="form.controls['lastname'].touched && form.controls['lastname'].errors?.['required']">
+                                    Enter your last name
+                                  </small>
                             </div>
 
                         </div>
@@ -45,7 +51,10 @@
 
                             <div class="mil-input-frame mil-dark-input mil-mb-30">
                                 <label class="mil-h6"><span>Email Address</span></label>
-                                <input type="email" placeholder="doe@mydomain.com">
+                                <input type="email" id="email" formControlName="email" placeholder="doe@mydomain.com">
+                                <small class="form-text errorMsg" *ngIf="form.controls['email'].touched && form.controls['email'].errors?.['required']">
+                                    Enter your email
+                                  </small>
                             </div>
 
                         </div>
@@ -53,7 +62,10 @@
 
                             <div class="mil-input-frame mil-dark-input mil-mb-30">
                                 <label class="mil-h6"><span>Phone</span></label>
-                                <input type="number" placeholder="Enter your phone number">
+                                <input matInput type="text" id="phone" formControlName="phone" placeholder="Enter your phone number" maxlength="10"/>
+                                <small class="form-text errorMsg" *ngIf="form.controls['phone'].touched && form.controls['phone'].errors?.['required']">
+                                    Enter your phone number
+                                  </small>
                             </div>
 
                         </div>
@@ -67,7 +79,10 @@
 
                             <div class="mil-input-frame mil-dark-input mil-mb-30">
                                 <label class="mil-h6 mil-dark"><span>Title</span></label>
-                                <input type="text" placeholder="Explore Opportunities">
+                                <input matInput type="text" id="title" formControlName="title" placeholder="Explore Opportunities"/>
+                                <small class="form-text errorMsg" *ngIf="form.controls['title'].touched && form.controls['title'].errors?.['required']">
+                                    Please enter a title!
+                                  </small>
                             </div>
 
                         </div>
@@ -75,25 +90,20 @@
 
                             <div class="mil-input-frame mil-dark-input mil-mb-30">
                                 <label class="mil-h6"><span>Project Description</span></label>
-                                <textarea placeholder="Your Message" class="mil-shortened"></textarea>
+                                <textarea formControlName="description" id="description" placeholder="Your Message" class="mil-shortened"></textarea>
+                                <small class="form-text errorMsg" *ngIf="form.controls['description'].touched && form.controls['description'].errors?.['required']">
+                                    Please enter description!
+                                  </small>
                             </div>
 
                         </div>
-
                         <div class="col-lg-12">
 
                             <button class="mil-button mil-border mil-fw"><span>Submit Now</span></button>
 
                         </div>
-
-
                     </div>
-
-
-
-
                 </form>
-
             </div>
             <div class="col-lg-4 col-xl-3 mil-mb-120">
 
