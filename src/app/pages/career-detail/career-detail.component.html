@@ -13,19 +13,22 @@
 <section class="mil-p-120-90">
     <div class="container">
         <div class="row flex-sm-row-reverse justify-content-between">
-            <div class="col-lg-4 col-xl-3" >
-                <div class="mil-project-info mil-mb-60">
-                    <h5 class="mil-list-title mil-mb-30">Skills</h5>
-                    <h6 class="mil-mb-15">{{careerDetails?.Skills[0]}}</h6>
-                    <div class="mil-divider mil-divider-left mil-mb-30"></div>
-                    <h6 class="mil-mb-15">{{careerDetails?.Skills[1]}}</h6>
-                    <div class="mil-divider mil-divider-left mil-mb-30"></div>
-                    <h6 class="mil-mb-15">{{careerDetails?.Skills[2]}}</h6>
-                    <div class="mil-divider mil-divider-left mil-mb-30"></div>
-                    <h6>{{careerDetails?.Skills[3]}}</h6>
-                </div>
-            </div>
+             <div class="col-lg-4 col-xl-3" >
+            <div class="mil-project-info mil-mb-60">
 
+                <h5 class="mil-list-title mil-mb-30">Details</h5>
+
+                <p class="mil-mb-10">Skills</p>
+                <h6 class="mil-mb-15">{{careerDetails.Skills}}</h6>
+                <div class="mil-divider mil-divider-left mil-mb-30"></div>
+                <p class="mil-mb-10"> Experience</p>
+                <h6 class="mil-mb-15">{{careerDetails. Experience}}</h6>
+                <div class="mil-divider mil-divider-left mil-mb-30"></div>
+                <p class="mil-mb-10">Technologies</p>
+                <h6 class="mil-mb-15">{{careerDetails.Technologies}}</h6>
+                <div class="mil-divider mil-divider-left mil-mb-30"></div>
+            </div>
+</div>
             <div class="col-lg-7 col-xl-8">
                 <span class="mil-suptitle mil-suptitle-2 mil-mb-30">Details</span>
                 <div>
@@ -34,18 +37,10 @@
                 <p class="mil-mb-60">{{ careerDetails?.description }}</p>
                 <h6 class="mil-mb-20">Summary</h6>
                 <p class="mil-mb-60">{{ careerDetails?.summary }}</p>
-                <h6 class="mil-mb-20">Summary</h6>
-                <p class="mil-mb-60">{{ careerDetails?.summary }}</p>
-                <h6 class="mil-mb-20">Experience</h6>
-                <p class="mil-mb-60">{{ careerDetails?.Experience }}</p>
-                <h6 class="mil-mb-20">Technologies</h6>
-                <p class="mil-mb-60">{{ careerDetails?.Technologies }}</p>
                 <h6 class="mil-mb-20">Responsibilities</h6>
                 <p class="mil-mb-60">{{ careerDetails?.Responsibilities }}</p>
                 <h6 class="mil-mb-20">Qualifications</h6>
                 <p class="mil-mb-60">{{ careerDetails?.Qualifications}}</p>
-                <h6 class="mil-mb-20">ProjectManager</h6>
-                <p class="mil-mb-60">{{ careerDetails?.ProjectManager}}</p>
                 </div>
             </div>
         </div>

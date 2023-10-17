@@ -1,0 +1,50 @@
+
+<div class="mil-banner-sm-2 mil-deep-bg">
+    <img src="../../../assets/img/blog/5.jpg" class="mil-background-image" style="object-position: center" alt="Publication cover">
+    <div class="mil-overlay"></div>
+</div>
+<!-- banner end -->
+
+<!-- blog -->
+<section class="mil-blog mil-p-120-0">
+    <div class="container">
+        <div class="row justify-content-between" >
+            <div class="col-lg-8 col-xl-8 mil-mb-120">
+
+                <span class="mil-suptitle mil-accent mil-mb-30">{{insightDetails?.overview?.bCategory}}</span>
+                <h3 class="mil-up-font mil-mb-30">{{insightDetails?.overview?.bTitle}}</h3>
+                <ul class="mil-dot-list mil-post-info mil-text-sm mil-mb-60">
+                    <li class="mil-post-author"><img [src]="insightDetails?.overview?.image" alt="Author"><span>{{insightDetails?.overview?.author}}</span></li>
+                    <li>{{insightDetails?.overview?.date}}</li>
+                    <li>{{insightDetails?.overview?.readTime}}</li>
+                </ul>
+                <div class="mil-divider mil-mb-60"></div>
+
+                <p class="mil-mb-30">{{insightDetails?.overview?.bDescription}}</p>
+<div *ngFor="let data of insightDetails.sections">
+                <h3 class="mil-mb-50">{{data?.title}}</h3>
+
+                <p class="mil-mb-30" *ngFor="let p of data.details">{{p}}</p>
+                  </div>
+                <div class="mil-divider mil-mb-60"></div>
+            </div>
+            <div class="col-lg-4 col-xl-3 mil-mb-120">
+                <div class="mil-divider mil-mb-60"></div>
+                <div class="mil-mb-60">
+                    <h5 class="mil-list-title mil-mb-30" >Tags</h5>
+                    <ul class="mil-tags">
+                        <li *ngFor="let item of insightDetails.tags"><a href="#.">{{item.name}}</a></li>
+                    </ul>
+                </div>
+
+                <div class="mil-divider mil-mb-60"></div>
+                <h5 class="mil-list-title mil-mb-30">Contact us</h5>
+                <p class="mil-mb-30">For any queries please email us at support@codedchalk.com</p>
+                <a href="" class="mil-link"><span>Contact</span><i class="fas fa-arrow-right"></i></a>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- blog end -->
+

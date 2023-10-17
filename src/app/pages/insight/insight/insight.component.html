@@ -1,0 +1,58 @@
+<!-- banner -->
+<div class="mil-banner-sm mil-deep-bg">
+    <img src="../../../assets/img/deco/map.png" alt="background" class="mil-background-image">
+    <div class="mil-deco mil-deco-accent" style="top: 47%; right: 10%; transform: rotate(90deg)"></div>
+    <div class="mil-banner-content">
+        <div class="container mil-relative">
+            <ul class="mil-breadcrumbs mil-mb-30">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Insight</a></li>
+            </ul>
+            <h2 class="mil-uppercase">Our Insight</h2>
+        </div>
+    </div>
+</div>
+<!-- banner end -->
+
+<!-- blog -->
+<section class="mil-blog mil-p-120-0">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-8 col-xl-8 mil-mb-120" *ngFor="let insight of insight">
+
+                <a class="mil-card mil-mb-60">
+                    <div class="mil-cover-frame">
+                        <img [src]="insight.overview.image"  alt="project">
+                    </div>
+                    <div href="javascript:void(0);" class="mil-description" (click)="goToDetails(insight.id)">
+                        <div class="mil-card-title">
+                            <ul class="mil-dot-list mil-text-sm mil-mb-15">
+                                <li>{{insight?.overview?.bCategory}} </li>
+                                <li>{{insight?.overview?.date}} </li>
+                            </ul>
+                            <h4> {{insight?.overview?.bTitle}} </h4>
+                        </div>
+                        <div class="mil-card-text">
+                            <p> {{insight?.overview?.bDescription}} </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-xl-3 mil-mb-120" *ngFor="let insight insight">
+                <div class="mil-divider mil-mb-60"></div>
+                <div class="mil-mb-60">
+                    <h5 class="mil-list-title mil-mb-30">Tags</h5>
+                    <ul class="mil-tags" >
+                        <li *ngFor="let item of insight.tags"><a href="#.">{{item.name}}</a></li>
+                    </ul>
+                </div>
+
+                <div class="mil-divider mil-mb-60"></div>
+                <h5 class="mil-list-title mil-mb-30">Contact us</h5>
+                <p class="mil-mb-30">For any queries please email us at support@codedchalk.com</p>
+                <a href="" class="mil-link"><span>Contact</span><i class="fas fa-arrow-right"></i></a>
+
+            </div>
+        </div>
+    </div>
+</section>

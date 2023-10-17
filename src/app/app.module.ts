@@ -17,7 +17,7 @@ import { ResponseV1Component } from './pages/responses/response-v1/response-v1.c
 import { CasesComponent } from './pages/case-studies/cases/cases.component';
 import { AboutUsComponent } from './pages/about/about-us/about-us.component';
 import { TeamComponent } from './pages/about/team/team.component';
-import { CareersComponent } from './pages/about/careers/careers.component';
+// import { CareersComponent } from './pages/about/careers/careers.component';
 import { FaqComponent } from './pages/about/faq/faq.component';
 import { TermsConditionsComponent } from './pages/static-pages/terms-conditions/terms-conditions.component';
 import { PrivacyPolicyComponent } from './pages/static-pages/privacy-policy/privacy-policy.component';
@@ -25,6 +25,9 @@ import { PartnersComponent } from './pages/static-pages/partners/partners.compon
 import { ServicesComponent } from './services/services/services.component';
 import { ServiceDetailsV1Component } from './services/service-details-v1/service-details-v1.component';
 import { CareerDetailComponent } from './pages/career-detail/career-detail.component';
+import { CareersComponent } from './pages/careers/careers.component';
+import { InsightDetailComponent } from './pages/insight/insight-detail/insight-detail.component';
+import { InsightComponent } from './pages/insight/insight/insight.component';
 
 
 
@@ -52,6 +55,8 @@ import { CareerDetailComponent } from './pages/career-detail/career-detail.compo
     ServicesComponent,
     ServiceDetailsV1Component,
     CareerDetailComponent,
+    InsightDetailComponent,
+    InsightComponent,
 
   ],
   imports: [

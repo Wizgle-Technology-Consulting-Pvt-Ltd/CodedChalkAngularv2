@@ -19,7 +19,7 @@ const jobsOpenings = [
       
         "HTML & CSS",
   
-        "JavaScripT",
+        "JavaScript",
   
         "Angular Framework"
   
