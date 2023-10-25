@@ -37,19 +37,10 @@ const routes: Routes = [
   {path: 'partners', component:PartnersComponent},
   {path: 'services', component:ServicesComponent},
   {path: 'service-detail/:id', component:ServiceDetailsV1Component},
-
-
-
-
-
-
-
-
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -18,19 +18,18 @@
 <section class="mil-blog mil-p-120-0">
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-lg-8 col-xl-8 mil-mb-120" *ngFor="let blog of blogs">
-
-                <a class="mil-card mil-mb-60">
+            <div class="col-lg-8 col-xl-8 mil-mb-120">
+                <a class="mil-card mil-mb-60" *ngFor="let blog of blogs">
                     <div class="mil-cover-frame">
-                        <img [src]="blog.overview.image"  alt="project">
+                        <img [src]="blog.overview.image" alt="project">
                     </div>
-                    <div href="javascript:void(0);" class="mil-description" (click)="goToDetails(blog.id)">
+                    <div href="javascript:void(0);" class="mil-description">
                         <div class="mil-card-title">
                             <ul class="mil-dot-list mil-text-sm mil-mb-15">
                                 <li>{{blog?.overview?.bCategory}} </li>
                                 <li>{{blog?.overview?.date}} </li>
                             </ul>
-                            <h4> {{blog?.overview?.bTitle}} </h4>
+                            <h4 (click)="goToDetails(blog.id)" style="cursor: pointer;"> {{blog?.overview?.bTitle}} </h4>
                         </div>
                         <div class="mil-card-text">
                             <p> {{blog?.overview?.bDescription}} </p>
@@ -38,14 +37,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-xl-3 mil-mb-120" *ngFor="let blog of blogs">
-                <div class="mil-divider mil-mb-60"></div>
-                <div class="mil-mb-60">
-                    <h5 class="mil-list-title mil-mb-30">Tags</h5>
-                    <ul class="mil-tags" >
-                        <li *ngFor="let item of blog.tags"><a href="#.">{{item.name}}</a></li>
-                    </ul>
-                </div>
+            <div class="col-lg-4 col-xl-3 mil-mb-120">
 
                 <div class="mil-divider mil-mb-60"></div>
                 <h5 class="mil-list-title mil-mb-30">Contact us</h5>
