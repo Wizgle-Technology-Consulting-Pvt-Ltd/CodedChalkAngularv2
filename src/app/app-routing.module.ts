@@ -21,6 +21,7 @@ import { CareersComponent } from './pages/careers/careers.component';
 import { InsightComponent } from './pages/insight/insight/insight.component';
 import { InsightDetailComponent } from './pages/insight/insight-detail/insight-detail.component';
 
+import { SummerInternshipComponent } from './pages/summer-internship/summer-internship.component';
 
 const routes: Routes = [
   {path: '', component:HomePageComponent},
@@ -55,6 +56,7 @@ const routes: Routes = [
 
 
 
+  {path: 'summer-internship', component:SummerInternshipComponent},
 ];
 
 @NgModule({
