@@ -1,0 +1,13 @@
+.mil-image-frame{
+
+    &::before{
+        display: none;
+    }
+    &::after{
+        display: none;
+    }
+
+}
+.mil-team-card p{
+    text-align: center !important;
+}
