@@ -18,6 +18,7 @@ import { PartnersComponent } from './pages/static-pages/partners/partners.compon
 import { ServicesComponent } from './services/services/services.component';
 import { ServiceDetailsV1Component } from './services/service-details-v1/service-details-v1.component';
 import { SummerInternshipComponent } from './pages/summer-internship/summer-internship.component';
+import { GovernmentComponent } from './pages/enterprise solutions/government/government.component';
 
 const routes: Routes = [
   {path: '', component:HomePageComponent},
@@ -39,6 +40,11 @@ const routes: Routes = [
   {path: 'services', component:ServicesComponent},
   {path: 'service-detail/:id', component:ServiceDetailsV1Component},
   {path: 'summer-internship', component:SummerInternshipComponent},
+
+
+  // Enterpise Solutions
+  {path: 'government', component:GovernmentComponent},
+
 ];
 
 @NgModule({

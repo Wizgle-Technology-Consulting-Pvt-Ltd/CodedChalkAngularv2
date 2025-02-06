@@ -25,6 +25,7 @@ import { PartnersComponent } from './pages/static-pages/partners/partners.compon
 import { ServicesComponent } from './services/services/services.component';
 import { ServiceDetailsV1Component } from './services/service-details-v1/service-details-v1.component';
 import { SummerInternshipComponent } from './pages/summer-internship/summer-internship.component';
+import { GovernmentComponent } from './pages/enterprise solutions/government/government.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { SummerInternshipComponent } from './pages/summer-internship/summer-inte
     PartnersComponent,
     ServicesComponent,
     ServiceDetailsV1Component,
-    SummerInternshipComponent
+    SummerInternshipComponent,
+    GovernmentComponent
   ],
   imports: [
     BrowserModule,
